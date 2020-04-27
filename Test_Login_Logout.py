@@ -20,11 +20,11 @@ class TestLoginLogout(unittest.TestCase):
         self.click_button_auth(wd)
         self.click_button_logout(wd)
 
-    def test_empty_login_logout(self):
+    def test_operator_login_logout(self):
         wd = self.wd
         self.open_home_page(wd)
-        self.input_login(wd, username="")
-        self.input_password(wd, password="")
+        self.input_login(wd, username="operator")
+        self.input_password(wd, password="operator")
         self.click_button_auth(wd)
         self.click_button_logout(wd)
 
