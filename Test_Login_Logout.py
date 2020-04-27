@@ -20,6 +20,14 @@ class TestLoginLogout(unittest.TestCase):
         self.click_button_auth(wd)
         self.click_button_logout(wd)
 
+    def test_empty_login_logout(self):
+        wd = self.wd
+        self.open_home_page(wd)
+        self.input_login(wd, username="")
+        self.input_password(wd, password="")
+        self.click_button_auth(wd)
+        self.click_button_logout(wd)
+
     def click_button_logout(self, wd):
         wd.find_element_by_xpath("//div[@id='headContainer']/a/p/i").click()
 
